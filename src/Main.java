@@ -12,10 +12,9 @@ public class Main {
     }
 
     public static void checkAccount(String login, String password, String confirmPassword) {
-        if (!login.matches("\\w{1,}") || login.length() > 20) {
+        if (!login.matches("\\w{1,20}")) {
             throw new WrongLoginException("Недопустимый логин");
-        } else if (!password.matches("\\w{1,}") || !password.equals(confirmPassword)
-                || password.length() > 20) {
+        } else if (!password.matches("\\w{1,20}") || !password.equals(confirmPassword)) {
             throw new WrongPasswordException("Недопустимый пароль");
         }
     }
