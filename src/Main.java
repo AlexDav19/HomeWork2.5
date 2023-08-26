@@ -6,6 +6,8 @@ public class Main {
             System.out.println("Недопустимый логин");
         } catch (WrongPasswordException e) {
             System.out.println("Недопустимый пароль");
+        } finally {
+            System.out.println("Метод выполнен");
         }
     }
 
